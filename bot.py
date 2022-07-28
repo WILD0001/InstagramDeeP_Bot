@@ -3,7 +3,7 @@ from telegram import InlineKeyboardButton, InlineKeyboardMarkup
 from telegram.ext import Updater, CommandHandler, MessageHandler, Filters
 import os
 from traceback import format_exc
-from instagram-scraper
+import instagram-scraper
 import time
 from consts import *
 import re
