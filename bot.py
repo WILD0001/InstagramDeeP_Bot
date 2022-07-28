@@ -3,7 +3,7 @@ from telegram import InlineKeyboardButton, InlineKeyboardMarkup
 from telegram.ext import Updater, CommandHandler, MessageHandler, Filters
 import os
 from traceback import format_exc
-import instagram-scraper
+import instagram_scraper
 import time
 from consts import *
 import re
@@ -11,7 +11,7 @@ import re
 '''Coded by Anish Gowda 😃😃😃😃'''
 
 
-L = instagram-scraper()
+L = instagram_scraper()
 TOKEN = os.getenv("BOT_TOKEN")
 APP_NAME = os.getenv("APP_NAME")
 TELEGRAM_USERNAME = os.getenv("TELEGRAM_USERNAME")
