@@ -10,6 +10,10 @@ import re
 
 '''Coded by Anish Gowda 😃😃😃😃'''
 
+args = {"login_user": "n_yshaaa", "login_pass": "harilrishnan"}
+
+insta_scraper = instagram_scraper.InstagramScraper(**args)
+insta_scraper.authenticate_with_login()
 TOKEN = os.getenv("BOT_TOKEN")
 APP_NAME = os.getenv("APP_NAME")
 TELEGRAM_USERNAME = os.getenv("TELEGRAM_USERNAME")
