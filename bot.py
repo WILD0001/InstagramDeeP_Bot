@@ -10,8 +10,6 @@ import re
 
 '''Coded by Anish Gowda 😃😃😃😃'''
 
-
-L = instagram_scraper()
 TOKEN = os.getenv("BOT_TOKEN")
 APP_NAME = os.getenv("APP_NAME")
 TELEGRAM_USERNAME = os.getenv("TELEGRAM_USERNAME")
@@ -56,7 +54,7 @@ def username(update, context):
             query = get_username(query)
         chat_id = update.message.chat_id
         try:
-            user = Profile.from_username(L.context, query)
+            user = insta_scraper.get_shared_data_userinfo(query)
             caption_msg = create_caption(user)
             context.bot.send_photo(
                 chat_id=chat_id, photo=user.profile_pic_url,
