@@ -54,7 +54,10 @@ def username(update, context):
             query = get_username(query)
         chat_id = update.message.chat_id
         try:
-            user = insta_scraper.get_shared_data_userinfo(query)
+            shared_data = insta_scraper.get_shared_data_userinfo(query)
+            arr = []
+            for user in insta_scraper.query_media_gen(shared_data):
+                arr.append(user)
             caption_msg = create_caption(user)
             context.bot.send_photo(
                 chat_id=chat_id, photo=user.profile_pic_url,
